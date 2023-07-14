@@ -4,6 +4,7 @@ import androidx.room.Dao;
 import androidx.room.Delete;
 import androidx.room.Insert;
 import androidx.room.OnConflictStrategy;
+import androidx.room.Query;
 import androidx.room.Update;
 
 import com.example.dolphinlive.Entities.Product;
@@ -19,6 +20,8 @@ public interface ProductDAO {
     void update(Product product);
     @Delete
     void delete(Product product);
-    @Query("SELECT * FROM PRODUCT ORDER BY productID ASC")
+    @Query("SELECT * FROM PRODUCTS ORDER BY productID ASC")
     List<Product> getallProducts();
+
+    List<Product> getAllProducts();
 }

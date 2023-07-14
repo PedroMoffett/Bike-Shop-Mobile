@@ -1,8 +1,9 @@
 package com.example.dolphinlive.Entities;
 
 import androidx.room.Entity;
+import androidx.room.PrimaryKey;
 
-@Entity (tableName = "parts")
+@Entity(tableName = "parts")
 public class Part {
     @PrimaryKey(autoGenerate = true)
     private int partID;
@@ -10,6 +11,16 @@ public class Part {
     private String partName;
     private double price;
     private int productID;
+
+    public Part(int partID, String partName, double price, int productID) {
+        this.partID = partID;
+        this.partName = partName;
+        this.price = price;
+        this.productID = productID;
+    }
+
+    public Part() {
+    }
 
     public int getPartID() {
         return partID;
@@ -41,20 +52,5 @@ public class Part {
 
     public void setProductID(int productID) {
         this.productID = productID;
-    }
-
-    public Part(int partID) {
-        this.partID = partID;
-    }
-
-    public Part(int partID, String partName, double price, int productID) {
-        this.partID = partID;
-        this.partName = partName;
-        this.price = price;
-        this.productID = productID;
-    }
-
-    public Part() {
-
     }
 }

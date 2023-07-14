@@ -1,9 +1,11 @@
 package com.example.dolphinlive.Entities;
 
+import kotlin.experimental.ExperimentalTypeInference;
+
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
-@Entity(tableName="products")
+@Entity(tableName = "products")
 public class Product {
     @PrimaryKey(autoGenerate = true)
     private int productID;
@@ -16,7 +18,7 @@ public class Product {
         this.productPrice = productPrice;
     }
 
-    public Product(int i, String bicycle, int i1, int i2) {
+    public Product() {
     }
 
     public int getProductID() {
@@ -43,4 +45,12 @@ public class Product {
         this.productPrice = productPrice;
     }
 
+    @Override
+    public String toString() {
+        return "Product{" +
+                "productID=" + productID +
+                ", productName='" + productName + '\'' +
+                ", productPrice=" + productPrice +
+                '}';
+    }
 }
