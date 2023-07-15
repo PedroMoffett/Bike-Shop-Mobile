@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">Dolphin Live</string>
+    <string name="share">Share</string>
+    <string name="notify_start">Notify Start</string>
+    <string name="notify_end">Notify End</string>
+    <string name="channel_name">DolphinChannel</string>
+    <string name="channel_description">Notifications for Dolphin Live App</string>
 </resources>

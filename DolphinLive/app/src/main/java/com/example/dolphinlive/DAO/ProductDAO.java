@@ -16,12 +16,14 @@ import java.util.List;
 public interface ProductDAO {
     @Insert(onConflict = OnConflictStrategy.IGNORE)
     void insert(Product product);
+
     @Update
     void update(Product product);
+
     @Delete
     void delete(Product product);
+
     @Query("SELECT * FROM PRODUCTS ORDER BY productID ASC")
     List<Product> getallProducts();
 
-    List<Product> getAllProducts();
 }
